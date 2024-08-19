@@ -28,11 +28,14 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Get pagination page"""
+        assert type(page) == int
+        assert type(page_size) == int
+        assert page > 0
+        assert page_size > 0
+        size = len(self.dataset())
         start, end = index_range(page, page_size)
 
-        if (start > 19419) or (end > 19419):
+        if (start >= size):
             return []
-    
-        # return self.__dataset[start: end]
-        # return (f"Start: {start}, End: {end}")
-        return (self.__dataset)
+
+        return self.dataset()[start: end]
