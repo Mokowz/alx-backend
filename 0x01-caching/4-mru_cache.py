@@ -5,7 +5,9 @@ from typing import OrderedDict
 
 
 class MRUCache(BaseCaching):
-    """MRU Cache"""
+    """
+    MRU Caching System
+    """
     def __init__(self):
         """Init"""
         super().__init__()

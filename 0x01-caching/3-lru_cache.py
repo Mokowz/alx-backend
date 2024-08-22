@@ -5,7 +5,9 @@ from typing import OrderedDict
 
 
 class LRUCache(BaseCaching):
-    """LRU Cache"""
+    """
+    LRU Caching System
+    """
     def __init__(self):
         """Init"""
         super().__init__()
